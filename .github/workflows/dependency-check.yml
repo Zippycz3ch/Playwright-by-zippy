@@ -2,8 +2,12 @@ name: Weekly Dependency Update
 
 on:
   schedule:
-    - cron: '0 8 * * 1' # Every Monday at 08:00 UTC
-  workflow_dispatch: # Manual trigger
+    - cron: '0 8 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: write # Needed to push commits
+  pull-requests: write # Needed to open PRs
 
 jobs:
   update-deps:
