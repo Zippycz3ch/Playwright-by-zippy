@@ -15,7 +15,7 @@
 |---------|---------|------|
 | [@playwright/test](https://www.npmjs.com/package/@playwright/test) | ^1.55.0 | devDependencies |
 | [@types/node](https://www.npmjs.com/package/@types/node) | ^24.1.0 | devDependencies |
-| [allure-playwright](https://www.npmjs.com/package/allure-playwright) | ^3.3.2 | devDependencies |
+| [allure-playwright](https://www.npmjs.com/package/allure-playwright) | ^3.4.1 | devDependencies |
 | [husky](https://www.npmjs.com/package/husky) | ^9.1.7 | devDependencies |
 | [ts-node](https://www.npmjs.com/package/ts-node) | ^10.9.2 | devDependencies |
 | [typescript](https://www.npmjs.com/package/typescript) | ^5.9.2 | devDependencies |
