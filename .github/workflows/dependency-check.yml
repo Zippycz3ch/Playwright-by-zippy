@@ -39,3 +39,4 @@ jobs:
             It updates dependencies in `package.json` to their latest versions using `npm-check-updates`.
           branch: chore/upgrade-dependencies
           delete-branch: true
+          author: 'github-actions[bot] <github-actions[bot]@users.noreply.github.com>'
