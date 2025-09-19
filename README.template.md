@@ -15,6 +15,73 @@
 
 ---
 
-## 1. Install Requirements
+## 1. Install Initial Requirements
 
-...
+- Install **Java 8**, **Git**, and **VS Code** using Ninite:  
+  [Ninite Installer](https://ninite.com/adoptjavax8-git-vscode/)
+
+- Install **Node.js**:  
+  [Download Node.js](https://nodejs.org/en/download)
+
+## 2. Install Project Packages
+
+Open VS Code and clone the repository:
+
+```bash
+git clone https://github.com/Zippycz3ch/PlayWright-By-Zippy.git
+```
+
+Then run:
+
+```bash
+npm install
+```
+
+## 3. Install Playwright Chromium
+
+```bash
+npx playwright install chromium
+```
+
+Optionally install all browsers:
+
+```bash
+npx playwright install chromium firefox webkit
+```
+
+## 4. Configure VS Code
+
+Install the **Playwright Test for VS Code** extension:  
+<img src="wiki/extentions.png" alt="Playwright Extension" width="400"/>
+
+If you don’t see tests in the **Testing** tab, click **Refresh**:  
+<img src="wiki/image.png" alt="Refresh Tests" width="400"/>
+
+## 5. Run Tests
+
+```bash
+npm test
+```
+
+Open HTML report:
+
+```bash
+npx playwright show-report
+```
+
+Open Allure report:
+
+```bash
+npx allure serve
+```
+
+---
+
+## 🚀 Start Docker with local QuickPizza
+
+```bash
+cd docker
+docker-compose up -d
+```
+
+Then open: [http://localhost:3333](http://localhost:3333)

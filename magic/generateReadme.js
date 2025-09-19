@@ -1,26 +1,26 @@
 const fs = require('fs');
 const path = require('path');
 
-const packageJsonPath = path.resolve('package.json');
-const templatePath = path.resolve('README.template.md');
-const outputPath = path.resolve('README.md');
+const packageJsonPath = path.resolve(__dirname, '../package.json');
+const templatePath = path.resolve(__dirname, '../README.template.md');
+const readmePath = path.resolve(__dirname, '../README.md');
 
 const pkg = JSON.parse(fs.readFileSync(packageJsonPath, 'utf-8'));
+const template = fs.readFileSync(templatePath, 'utf-8');
 
-const sectionTypes = ['dependencies', 'devDependencies'];
-let packageTable = '| Package | Version | Type |\n|---------|---------|------|\n';
-
-for (const section of sectionTypes) {
-    const deps = pkg[section];
-    if (deps) {
-        for (const [name, version] of Object.entries(deps)) {
-            packageTable += `| [${name}](https://www.npmjs.com/package/${name}) | ${version} | ${section} |\n`;
-        }
-    }
+function formatDeps(deps, type) {
+  return Object.entries(deps || {})
+    .map(([name, version]) => `| [${name}](https://www.npmjs.com/package/${name}) | ${version} | ${type} |`)
+    .join('\n');
 }
 
-const template = fs.readFileSync(templatePath, 'utf-8');
-const finalReadme = template.replace('{{PACKAGE_LIST}}', packageTable);
+const tableHeader = `| Package | Version | Type |
+|---------|---------|------|`;
 
-fs.writeFileSync(outputPath, finalReadme);
+const dependenciesTable = [tableHeader, formatDeps(pkg.dependencies, 'dependencies'), formatDeps(pkg.devDependencies, 'devDependencies')].filter(Boolean).join('\n');
+
+const finalReadme = template.replace('{{PACKAGE_LIST}}', dependenciesTable);
+
+fs.writeFileSync(readmePath, finalReadme, 'utf-8');
+
 console.log('✅ README.md generated successfully.');
