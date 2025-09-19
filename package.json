@@ -11,9 +11,9 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
-    "@playwright/test": "^1.54.1",
+    "@playwright/test": "^1.55.0",
     "@types/node": "^24.1.0",
-    "allure-playwright": "^3.3.2",
+    "allure-playwright": "^3.4.1",
     "husky": "^9.1.7",
     "ts-node": "^10.9.2",
     "typescript": "^5.9.2"

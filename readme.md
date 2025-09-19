@@ -13,7 +13,7 @@
 
 | Package | Version | Type |
 |---------|---------|------|
-| [@playwright/test](https://www.npmjs.com/package/@playwright/test) | ^1.54.1 | devDependencies |
+| [@playwright/test](https://www.npmjs.com/package/@playwright/test) | ^1.55.0 | devDependencies |
 | [@types/node](https://www.npmjs.com/package/@types/node) | ^24.1.0 | devDependencies |
 | [allure-playwright](https://www.npmjs.com/package/allure-playwright) | ^3.3.2 | devDependencies |
 | [husky](https://www.npmjs.com/package/husky) | ^9.1.7 | devDependencies |
