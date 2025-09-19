@@ -35,17 +35,10 @@ export default defineConfig({
   projects: [
     {
       name: "chromium",
-      use: { ...devices["Desktop Chrome"] },
-    },
-
-    {
-      name: "firefox",
-      use: { ...devices["Desktop Firefox"] },
-    },
-
-    {
-      name: "webkit",
-      use: { ...devices["Desktop Safari"] },
+      use: {
+        ...devices["Desktop Chrome"],
+        channel: "chrome", // system Chrome, custom binaries currently doesnt work and throws error, traceviewer is not working
+      },
     },
 
     /* Test against mobile viewports. */
