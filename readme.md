@@ -47,6 +47,8 @@ Open VS Code and clone the repository:
 git clone https://github.com/Zippycz3ch/PlayWright-By-Zippy.git
 ```
 
+Open the cloned folder in VS Code.
+
 Then run:
 
 ```bash
