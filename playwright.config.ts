@@ -8,10 +8,13 @@ import { defineConfig, devices } from "@playwright/test";
 // import path from 'path';
 // dotenv.config({ path: path.resolve(__dirname, '.env') });
 
+
+
 /**
  * See https://playwright.dev/docs/test-configuration.
  */
 export default defineConfig({
+
   testDir: "./tests",
   /* Run tests in files in parallel */
   fullyParallel: true,
@@ -24,6 +27,12 @@ export default defineConfig({
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: [["line"], ["allure-playwright"], ["html"]],
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */ use: {
+
+    baseURL: process.env.BASE_URL || "http://localhost:3333",
+    extraHTTPHeaders: {
+      Authorization: `Token ${process.env.PIZZA_TOKEN || "abcdef0123456789"}`,
+    },
+
     /* Base URL to use in actions like `await page.goto('/')`. */
     // baseURL: 'http://localhost:3000',
 

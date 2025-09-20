@@ -1,18 +1,24 @@
 import { test, expect } from '@playwright/test';
 
 test('has title', async ({ page }) => {
-  await page.goto('https://playwright.dev/');
+  const info = test.info();
+  info.annotations.push({ type: 'feature', description: 'Homepage' });
+  info.annotations.push({ type: 'story', description: 'Title Check' });
+  info.annotations.push({ type: 'severity', description: 'normal' });
+  info.annotations.push({ type: 'description', description: 'Check that the homepage title contains "Playwright".' });
 
-  // Expect a title "to contain" a substring.
+  await page.goto('https://playwright.dev/');
   await expect(page).toHaveTitle(/Playwright/);
 });
 
 test('get started link', async ({ page }) => {
+  const info = test.info();
+  info.annotations.push({ type: 'feature', description: 'Homepage' });
+  info.annotations.push({ type: 'story', description: 'Navigation' });
+  info.annotations.push({ type: 'severity', description: 'critical' });
+  info.annotations.push({ type: 'description', description: 'Ensure that the Get Started link navigates to Installation section.' });
+
   await page.goto('https://playwright.dev/');
-
-  // Click the get started link.
   await page.getByRole('link', { name: 'Get started' }).click();
-
-  // Expects page to have a heading with the name of Installation.
   await expect(page.getByRole('heading', { name: 'Installation' })).toBeVisible();
 });

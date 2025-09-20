@@ -1,3 +1,3 @@
 #!/bin/sh
-node ./magic/generateReadme.js
+node ./wiki/generateReadme.js
 git add README.md

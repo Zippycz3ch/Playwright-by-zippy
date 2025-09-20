@@ -1,8 +1,9 @@
 const fs = require('fs');
 const path = require('path');
 
+// Paths relative to this script in /wiki/
 const packageJsonPath = path.resolve(__dirname, '../package.json');
-const templatePath = path.resolve(__dirname, '../README.template.md');
+const templatePath = path.resolve(__dirname, './README.template.md'); // now in /wiki/
 const readmePath = path.resolve(__dirname, '../README.md');
 
 const pkg = JSON.parse(fs.readFileSync(packageJsonPath, 'utf-8'));
