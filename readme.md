@@ -13,9 +13,14 @@
 
 | Package | Version | Type |
 |---------|---------|------|
+| [@faker-js/faker](https://www.npmjs.com/package/@faker-js/faker) | ^9.9.0 | devDependencies |
 | [@playwright/test](https://www.npmjs.com/package/@playwright/test) | ^1.55.0 | devDependencies |
 | [@types/node](https://www.npmjs.com/package/@types/node) | ^24.1.0 | devDependencies |
+| [ajv](https://www.npmjs.com/package/ajv) | ^8.17.1 | devDependencies |
+| [allure-commandline](https://www.npmjs.com/package/allure-commandline) | ^2.34.1 | devDependencies |
+| [allure-js-commons](https://www.npmjs.com/package/allure-js-commons) | ^3.4.1 | devDependencies |
 | [allure-playwright](https://www.npmjs.com/package/allure-playwright) | ^3.4.1 | devDependencies |
+| [dotenv](https://www.npmjs.com/package/dotenv) | ^17.2.2 | devDependencies |
 | [husky](https://www.npmjs.com/package/husky) | ^9.1.7 | devDependencies |
 | [ts-node](https://www.npmjs.com/package/ts-node) | ^10.9.2 | devDependencies |
 | [typescript](https://www.npmjs.com/package/typescript) | ^5.9.2 | devDependencies |
