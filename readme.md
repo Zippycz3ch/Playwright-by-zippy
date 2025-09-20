@@ -1,7 +1,5 @@
 # PlayWright in TypeScript with Allure Reports
 
-Allure
-
 This repository demonstrates how to set up Playwright with TypeScript and integrate Allure reports for better test reporting.
 
 It also contains docker-compose files for easy setup of local QuickPizza from Grafana for learning purposes.
