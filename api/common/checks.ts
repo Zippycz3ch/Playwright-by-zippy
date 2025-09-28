@@ -55,7 +55,7 @@ export function check403(result: ApiTestResult) {
 }
 
 export function checkResponseTime(result: ApiTestResult, expectedDuration: Duration) {
-    expect(result.duration, `Expected response time to be less than ${expectedDuration}mnd got ${result.duration}ms`).toBeLessThan(expectedDuration);
+    expect(result.duration, `Expected response time to be less than ${expectedDuration}ms, got ${result.duration}ms`).toBeLessThan(expectedDuration);
 }
 
 export function validateJsonSchema(data: unknown, schema: any): boolean {

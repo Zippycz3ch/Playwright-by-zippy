@@ -22,10 +22,8 @@ export async function sendRequestAsync(
         // docker compose up -d
         // http://localhost:3333
         // or use deployed version https://quickpizza.grafana.com
-        // If urlOrEndpoint is a full URL, use it. 
-        // Otherwise, prepend local base URL and ensure a leading slash.
         let url: string;
-        if (endpoint.startsWith("http")) {
+        if (endpoint.startsWith("http") || endpoint.startsWith("https")) {
             url = endpoint;
         } else {
             url = "http://localhost:3333" + (endpoint.startsWith("/") ? endpoint : "/" + endpoint);

@@ -3,7 +3,6 @@ import { test } from '@playwright/test';
 import { getQuotes } from "../../api/EP/pizza/getQuotes/getQuotesBasic"
 import { adminAccount } from '../../api/common/accounts';
 import { getQuotesContext } from '../../api/EP/pizza/getQuotes/getQuotesContext';
-import { UserData } from '../../api/models/UserData';
 
 test.describe("GET /api/quotes", { tag: ["@api"] }, () => {
     test('Basic - GET /api/quotes returns quotes', async ({ }) => {
