@@ -1,24 +1,24 @@
-import { test, expect } from '@playwright/test';
-import * as dotenv from 'dotenv';
-import { validateQuotesSchema } from '../helpers/schemaValidator';
+// tests/API/quotesRefactor.spec.ts
+import { test } from '@playwright/test';
+import { getQuotes } from "../../api/EP/pizza/getQuotes/getQuotesBasic"
+import { adminAccount } from '../../api/common/accounts';
+import { getQuotesContext } from '../../api/EP/pizza/getQuotes/getQuotesContext';
+import { UserData } from '../../api/models/UserData';
 
-dotenv.config();
+test.describe("GET /api/quotes", { tag: ["@api"] }, () => {
+    test('Basic - GET /api/quotes returns quotes', async ({ }) => {
+        await test.step('Send GET /api/quotes request', async () => {
+            await getQuotes(adminAccount);
+        });
+    });
 
-test('GET /api/quotes returns quotes', async ({ request }) => {
-    await test.step('Send GET /api/quotes request', async () => {
-        const res = await request.get('/api/quotes');
-        expect(res.status()).toBe(200);
-
-        const body = await res.json();
-        console.log(body.quotes);
-
-        await test.step('Validate schema', async () => {
-            expect(validateQuotesSchema(body), 'Schema validation failed').toBe(true);
+    test('Context - GET /api/quotes returns quotes', async ({ }) => {
+        await test.step('Send GET /api/quotes request', async () => {
+            await getQuotesContext(adminAccount);
         });
 
-        await test.step('Sanity check: quotes is an array and not empty', async () => {
-            expect(Array.isArray(body.quotes)).toBe(true);
-            expect(body.quotes.length).toBeGreaterThan(0);
+        await test.step('Send GET /api/quotes request', async () => {
+            await getQuotesContext(adminAccount, '200');
         });
     });
 });
