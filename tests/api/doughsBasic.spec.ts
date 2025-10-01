@@ -2,7 +2,7 @@
 import { test, expect } from '@playwright/test';
 import { sendRequestAsync } from '../../api/helpers/sendRequestAsync';
 
-test('GET /api/doughs - returns doughs', async () => {
+test('GET /api/doughs - returns doughs - basic', async () => {
     const expectedDuration = 800;
 
     const method = 'GET';
