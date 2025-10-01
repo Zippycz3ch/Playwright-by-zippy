@@ -5,8 +5,9 @@ import { UserData } from "../../../models/UserData";
 import { check200, check401, check403, Duration } from "../../../common/checks";
 
 export async function getDoughs(userData: UserData, context: '200' | '401' | '403' = '200') {
-    const endpoint = 'api/doughs';
     const method = 'GET';
+
+    const endpoint = 'api/doughs';
     const headers = getRequestHeader(userData);
     const body = undefined;
 

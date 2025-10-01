@@ -5,8 +5,8 @@ import { UserData } from "../../../models/UserData";
 import { check200, Duration } from "../../../common/checks";
 
 export async function getQuotes(userData: UserData) {
-    const endpoint = 'api/quotes';
     const method = 'GET';
+    const endpoint = 'api/quotes';
     const headers = getRequestHeader(userData);
     const body = undefined;
 
