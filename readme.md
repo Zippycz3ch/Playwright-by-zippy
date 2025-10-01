@@ -1,4 +1,9 @@
 # PlayWright in TypeScript with Allure Reports
+
+This repository demonstrates how to set up Playwright with TypeScript and integrate Allure reports for better test reporting.
+
+It also contains docker-compose files for easy setup of local QuickPizza from Grafana for learning purposes.
+
 ![Node version](https://img.shields.io/badge/node-%3E%3D18-blue?logo=node.js)
 ![License](https://img.shields.io/badge/license-ISC-brightgreen)
 [![Dependabot Updates ](https://github.com/Zippycz3ch/PlayWright-By-Zippy/actions/workflows/dependabot/dependabot-updates/badge.svg)](https://github.com/Zippycz3ch/PlayWright-By-Zippy/actions/workflows/dependabot/dependabot-updates)
@@ -6,20 +11,17 @@
 [![Playwright](https://img.shields.io/npm/v/@playwright/test?color=blueviolet&label=playwright)](https://www.npmjs.com/package/@playwright/test)
 [![Allure](https://img.shields.io/npm/v/allure-playwright?color=orange&label=allure-playwright)](https://www.npmjs.com/package/allure-playwright)
 
-This repository demonstrates how to set up Playwright with TypeScript and integrate Allure reports for better test reporting.
-
-It also contains docker-compose files for easy setup of local QuickPizza from Grafana for learning purposes.
-
 ---
 
 ## 📦 Packages Used
 
 | Package | Version | Type |
 |---------|---------|------|
-| [@faker-js/faker](https://www.npmjs.com/package/@faker-js/faker) | ^9.9.0 | devDependencies |
+| [@faker-js/faker](https://www.npmjs.com/package/@faker-js/faker) | ^10.0.0 | devDependencies |
 | [@playwright/test](https://www.npmjs.com/package/@playwright/test) | ^1.55.0 | devDependencies |
 | [@types/node](https://www.npmjs.com/package/@types/node) | ^24.1.0 | devDependencies |
 | [ajv](https://www.npmjs.com/package/ajv) | ^8.17.1 | devDependencies |
+| [ajv-formats](https://www.npmjs.com/package/ajv-formats) | ^3.0.1 | devDependencies |
 | [allure-commandline](https://www.npmjs.com/package/allure-commandline) | ^2.34.1 | devDependencies |
 | [allure-js-commons](https://www.npmjs.com/package/allure-js-commons) | ^3.4.1 | devDependencies |
 | [allure-playwright](https://www.npmjs.com/package/allure-playwright) | ^3.4.1 | devDependencies |
@@ -43,7 +45,7 @@ It also contains docker-compose files for easy setup of local QuickPizza from Gr
 Open VS Code and clone the repository:
 
 ```bash
-git clone https://github.com/Zippycz3ch/Playwright-by-zippy
+git clone https://github.com/Zippycz3ch/PlayWright-By-Zippy.git
 ```
 
 Open the cloned folder in VS Code.
