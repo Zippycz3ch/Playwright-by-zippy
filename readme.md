@@ -18,7 +18,7 @@ It also contains docker-compose files for easy setup of local QuickPizza from Gr
 | Package | Version | Type |
 |---------|---------|------|
 | [@faker-js/faker](https://www.npmjs.com/package/@faker-js/faker) | ^10.0.0 | devDependencies |
-| [@playwright/test](https://www.npmjs.com/package/@playwright/test) | ^1.55.0 | devDependencies |
+| [@playwright/test](https://www.npmjs.com/package/@playwright/test) | ^1.55.1 | devDependencies |
 | [@types/node](https://www.npmjs.com/package/@types/node) | ^24.1.0 | devDependencies |
 | [ajv](https://www.npmjs.com/package/ajv) | ^8.17.1 | devDependencies |
 | [ajv-formats](https://www.npmjs.com/package/ajv-formats) | ^3.0.1 | devDependencies |
