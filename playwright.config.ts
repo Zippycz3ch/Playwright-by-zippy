@@ -44,13 +44,19 @@ export default defineConfig({
   projects: [
     {
       name: "API",
-      testDir: "./tests/API",
-      use: { ...devices["Desktop Chrome"] },
+      testDir: "./tests/api",
+      use: {
+        ...devices["Desktop Chrome"],
+        channel: "chrome",
+      }
     },
     {
       name: "UI",
-      testDir: "./tests/UI",
-      use: { ...devices["Desktop Chrome"] },
+      testDir: "./tests/ui",
+      use: {
+        ...devices["Desktop Chrome"],
+        channel: "chrome",
+      },
     },
 
     /* Test against mobile viewports. */
